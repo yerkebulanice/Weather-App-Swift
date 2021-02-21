@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="Weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vym-hu-QYj">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UPE-fk-3lp">
+                                <rect key="frame" x="32" y="37" width="35" height="14.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Feels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lot-hx-sm0">
+                                <rect key="frame" x="27" y="62" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrE-zj-isA">
+                                <rect key="frame" x="28" y="5" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.66614978865170427" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NrE-zj-isA" secondAttribute="trailing" constant="25" id="0YU-VQ-pFu"/>
+                            <constraint firstItem="UPE-fk-3lp" firstAttribute="top" secondItem="NrE-zj-isA" secondAttribute="bottom" constant="2" id="KRM-UQ-J14"/>
+                            <constraint firstItem="lot-hx-sm0" firstAttribute="top" secondItem="UPE-fk-3lp" secondAttribute="bottom" constant="6" id="QkD-Uk-w8w"/>
+                            <constraint firstAttribute="trailing" secondItem="lot-hx-sm0" secondAttribute="trailing" constant="26" id="S0j-SE-fLj"/>
+                            <constraint firstItem="lot-hx-sm0" firstAttribute="leading" secondItem="Vym-hu-QYj" secondAttribute="leading" constant="27" id="TId-g0-Z8U"/>
+                            <constraint firstAttribute="bottom" secondItem="lot-hx-sm0" secondAttribute="bottom" constant="17" id="UyI-ma-8wN"/>
+                            <constraint firstItem="UPE-fk-3lp" firstAttribute="leading" secondItem="Vym-hu-QYj" secondAttribute="leading" constant="32" id="d97-jP-U8L"/>
+                            <constraint firstItem="NrE-zj-isA" firstAttribute="top" secondItem="Vym-hu-QYj" secondAttribute="top" constant="11" id="gXS-83-N7q"/>
+                            <constraint firstItem="NrE-zj-isA" firstAttribute="leading" secondItem="Vym-hu-QYj" secondAttribute="leading" constant="28" id="iEb-Ks-jY5"/>
+                            <constraint firstAttribute="trailing" secondItem="UPE-fk-3lp" secondAttribute="trailing" constant="31" id="x65-tC-rqm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="100" height="100"/>
+            <connections>
+                <outlet property="collectionView" destination="Vym-hu-QYj" id="CEE-tp-GbT"/>
+                <outlet property="iconImage" destination="UPE-fk-3lp" id="Bbe-jN-lmZ"/>
+                <outlet property="tempHourly" destination="lot-hx-sm0" id="aOZ-PO-Ai4"/>
+                <outlet property="timeLabel" destination="NrE-zj-isA" id="raX-HP-TV3"/>
+            </connections>
+            <point key="canvasLocation" x="-5.7971014492753632" y="84.375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cloud.fill" catalog="system" width="128" height="84"/>
+    </resources>
+</document>
